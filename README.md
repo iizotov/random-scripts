@@ -1,6 +1,6 @@
 # A Collection of Random Scripts
 
-## [hdi-stop-services.sh](../blob/master/hdi-stop-services.sh)
+## [hdi-stop-services.sh](../master/hdi-stop-services.sh)
 This Azure HDInsight [script action](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#use-a-script-action-during-cluster-creation) can be run at run-time or during HDInsight cluster creation to stop the services that you do not require to free up resources
 
 ### Usage
@@ -8,7 +8,7 @@ This Azure HDInsight [script action](https://docs.microsoft.com/en-us/azure/hdin
 sudo -E bash hdi-stop-services.sh <service0-to-stop> [<service1-to-stop>] [<service2-to-stop>] ... [<serviceN-to-stop>]
 ```   
 
-## [aws-rds-test-scale.sh](../blob/master/aws-rds-test-scale.sh)
+## [aws-rds-test-scale.sh](../master/aws-rds-test-scale.sh)
 The idea for the script is to measure outage when a scale operation (vCPU/RAM/db size change) hits an AWS RDS MySQL or Aurora instances. It continuously generates load on the database(s)  using [dbbench](https://github.com/memsql/dbbench), attempts to reconnect when it's down whilst logging everything. 
 
 It's best to test a bunch of RDS instance types to be able to compare results:
@@ -45,7 +45,7 @@ go get github.com/memsql/dbbench
 
 3. cd into the script directory and run ```bash ./aws-rds-test-scale.sh```
 
-## [sql-server-linux-container-instance.sh](../blob/master/sql-server-linux-container-instance.sh)
+## [sql-server-linux-container-instance.sh](../master/sql-server-linux-container-instance.sh)
 A bit of fun really. When [Azure Container Instances](https://azure.microsoft.com/en-gb/services/container-instances/) became available, I thought - wouldn't it be good to try using it for something heavy, like SQL Server 2017 (which was not the idea behind the ACS service, but that's beside the point). This script does just that - pulls a [SQL Server 2017 docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/) and spins up an ACI instance in Azure
 
 ### Usage
