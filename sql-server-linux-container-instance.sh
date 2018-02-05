@@ -15,3 +15,6 @@ az container create --name $NAME --location $LOCATION --image microsoft/mssql-se
 
 #List Containers
 az container list
+
+echo "to remove, run: "
+echo "az group delete --name sqlRG -y"
