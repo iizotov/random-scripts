@@ -1,3 +1,3 @@
 <?php
-  echo "Hello ".rand();
+  echo "<h1>Hello ".rand()."</h1>";
 ?>
