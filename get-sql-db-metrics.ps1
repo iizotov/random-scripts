@@ -82,7 +82,7 @@ foreach ($subscriptionId in $subscriptionIds) {
             if ($sqlDatabase.DatabaseName -ine "master") {
                 Write-Host "Found $($sqlDatabase.DatabaseName) on $($sqlDatabase.ServerName)";
                 foreach ($metric in Get-AzureRmMetric -ResourceId $sqlDatabase.ResourceId -TimeGrain $timeGrain -StartTime $startDateTimeUTC -AggregationType Average -MetricNames $metrics -WarningAction SilentlyContinue -ErrorAction Continue) {
-                    $metric.data | select TimeStamp, Average, @{l = "Metric"; e = {$metric.Name.Value}}, @{l = "Server"; e = {$sqlDatabase.ServerName}}, @{l = "Database"; e = {$sqlDatabase.DatabaseName}}, @{l = "DbSize"; e = {$sqlDatabase.CurrentServiceObjectiveName}} | ConvertTo-Csv -Delimiter "," | select -skip 2 >> $outputPath;
+                    $metric.data | select TimeStamp, Average, @{l = "Metric"; e = {$metric.Name.Value}}, @{l = "Server"; e = {$sqlDatabase.ServerName}}, @{l = "Database"; e = {$sqlDatabase.DatabaseName}}, @{l = "DbSize"; e = {$sqlDatabase.CurrentServiceObjectiveName}}, @{l = "DbLocation"; e = {$sqlDatabase.Location}} | ConvertTo-Csv -Delimiter "," | select -skip 2 >> $outputPath;
                     Write-Host "finished exporting $($metric.Name.Value) for $($sqlDatabase.DatabaseName) on $($sqlDatabase.ServerName) to $outputPath";
                 }
             }
