@@ -10,11 +10,11 @@ Metrics are exported as csv files to a specified folder
 ### Usage
 > make sure to install [azure powershell tools](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.2.0) first
 ```powershell
-get-sql-db-metrics.ps1 -subscriptionIds <String[]> [-startDateTimeUTC <DateTime>] [-timeGrain <TimeSpan>] [-metrics <String[]>] [-outputFolder <String>] [<CommonParameters>]
+.\get-sql-db-metrics.ps1 -subscriptionIds <String[]> [-startDateTimeUTC <DateTime>] [-timeGrain <TimeSpan>] [-metrics <String[]>] [-outputFolder <String>] [<CommonParameters>]
 ```
 or if you want to scan all available subscriptions, use
 ```powershell
-get-sql-db-metrics.ps1 -scanAllSubscriptions  [-startDateTimeUTC <DateTime>] [-timeGrain <TimeSpan>] [-metrics <String[]>] [-outputFolder <String>] [<CommonParameters>]
+.\get-sql-db-metrics.ps1 -scanAllSubscriptions  [-startDateTimeUTC <DateTime>] [-timeGrain <TimeSpan>] [-metrics <String[]>] [-outputFolder <String>] [<CommonParameters>]
 ```   
 
 ## [get-sql-db-metrics.sh](../master/get-sql-db-metrics.sh)
