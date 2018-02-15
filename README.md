@@ -2,9 +2,15 @@
 
 ## [get-sql-db-metrics.ps1](../master/get-sql-db-metrics.ps1)
 This powershell script exports metrics for detailed analysis from all Azure SQL DB Databases:
-* from either a supplied list of Azure subscription ids
-* alternatively a full scan will be performed
+* from either a supplied list of Azure subscription ids (comma-separated) if `-subscriptionIds` is supplied: 
+    ``` 
+    .\get-sql-db-metrics.ps1 -subscriptionIds cb7539f6-f98d-4092-a53e-149daff8ba5d,eaca98dc-dead-4803-af35-f0edb23e0537
+    ```
 
+* alternatively a full scan will be performed if `-scanAllSubscriptions` is supplied:
+    ``` 
+    .\get-sql-db-metrics.ps1 -scanAllSubscriptions 
+    ```
 Metrics are exported as csv files to a specified folder
 
 ### Usage
@@ -16,6 +22,11 @@ or if you want to scan all available subscriptions, use
 ```powershell
 .\get-sql-db-metrics.ps1 -scanAllSubscriptions  [-startDateTimeUTC <DateTime>] [-timeGrain <TimeSpan>] [-metrics <String[]>] [-outputFolder <String>] [<CommonParameters>]
 ```   
+
+To get detailed help, use
+```powershell
+Get-Help .\get-sql-db-metrics.ps1 -full
+```
 
 ## [get-sql-db-metrics.sh](../master/get-sql-db-metrics.sh)
 A linux Azure CLI version of the [get-sql-db-metrics.ps1](../master/get-sql-db-metrics.ps1) script. Make sure to install [azure cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) version 2.0.27 or above 
