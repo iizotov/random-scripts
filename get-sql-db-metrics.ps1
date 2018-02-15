@@ -69,9 +69,6 @@ catch {
 if ($scanAllSubscriptions) {
     $subscriptionIds = $availableSubscriptionIds;  
 }
-else {
-
-}
 
 foreach ($subscriptionId in $subscriptionIds) {
     #cleaning up files
