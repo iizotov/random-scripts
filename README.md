@@ -28,6 +28,9 @@ To get detailed help, use
 Get-Help .\get-sql-db-metrics.ps1 -full
 ```
 
+## [get-vm-metrics.ps1](../master/get-vm-metrics.ps1)
+A variation of the [get-sql-db-metrics.ps1](../master/get-sql-db-metrics.ps1) script for Azure VMs
+
 ## [get-sql-db-metrics.sh](../master/get-sql-db-metrics.sh)
 A linux Azure CLI version of the [get-sql-db-metrics.ps1](../master/get-sql-db-metrics.ps1) script. Make sure to install [azure cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) version 2.0.27 or above 
 
