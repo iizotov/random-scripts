@@ -78,7 +78,7 @@ az account set --subscription $subscriptionId
 Write-Host "Selected subscription $subscriptionId"
 
 # Check if kubectl is installed and install using az aks install-cli
-kubectl version 2>&1 | Out-Null
+kubectl 2>&1 | Out-Null
 
 if (!$?) {
     Write-Host 'kubectl not installed, installing...'
