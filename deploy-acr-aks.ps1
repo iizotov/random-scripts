@@ -103,15 +103,31 @@ $acr = Read-Default 'Enter an ACR name' $acr -SilentlyAcceptDefault $Silent
 
 # Create an RG
 Write-Host "Creating resource group $resourceGroup in $region"
-az group create --name $resourceGroup --location $region
+az group create --name $resourceGroup --location $region | Out-Null
 
 # Create an ACR
-Write-Host "Creating ACR $acr in resource group $resourceGroup"
-az acr create --resource-group $resourceGroup --name $acr --sku Basic
+Write-Host "Please wait... Creating ACR $acr in resource group $resourceGroup"
+az acr create --resource-group $resourceGroup --name $acr --sku Basic| Out-Null
 
 # Create an AKS cluster
-Write-Host "Creating AKS cluster $aksCluster in resource group $resourceGroup"
-az aks create --resource-group $resourceGroup --name $aksCluster --node-count $nodeCount --generate-ssh-keys
+Write-Host "Please wait... Creating AKS cluster $aksCluster in resource group $resourceGroup"
+az aks create --resource-group $resourceGroup --name $aksCluster --node-count $nodeCount --generate-ssh-keys | Out-Null
+
+Write-Host "private key ~/.ssh/id_rsa"
+Write-Host
+Get-Content ~/.ssh/id_rsa
+Write-Host
+
+
+Write-Host "public key ~/.ssh/id_rsa.pub"
+Write-Host
+Get-Content ~/.ssh/id_rsa.pub
+Write-Host
+
 
 # Get credentials for AKS
-az aks get-credentials --resource-group $resourceGroup --name $aksCluster
+az aks get-credentials --resource-group $resourceGroup --name $aksCluster | Out-Null
+Write-Host "~/.kube/config contents:"
+Write-Host
+Get-Content ~/.kube/config
+Write-Host
