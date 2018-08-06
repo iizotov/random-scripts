@@ -1,10 +1,10 @@
 # A Collection of Random Stuff
 
-## [Some bindings between Azure Storage Services and compute for data analytics](https://jsfiddle.net/685dm7h3/44/)
+## [Some bindings between Azure Storage Services and compute for data analytics](https://jsfiddle.net/iizotov/7fL09cq6/)
 
 ![Image of Azure Storage to Compute bindinds for analytics](../master/images/sankey.png)
 
-For interactivity, go to [jsfiddle](https://jsfiddle.net/685dm7h3/44/)
+For interactivity, go to my [jsfiddle](https://jsfiddle.net/iizotov/7fL09cq6/)
 
 ## [deploy-acr-aks.ps1](../master/deploy-acr-aks.ps1)
 
