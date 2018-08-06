@@ -1,8 +1,10 @@
 # A Collection of Random Stuff
 
-## [Bingings between Azure Storage Services and compute for Analytics](https://jsfiddle.net/685dm7h3/44/)
+## [Some bindings between Azure Storage Services and compute for data analytics](https://jsfiddle.net/685dm7h3/44/)
 
-![Image of Azure Storage to Compute bindinds](../master/images/sankey.png)
+![Image of Azure Storage to Compute bindinds for analytics](../master/images/sankey.png)
+
+For interactivity, go to [jsfiddle](https://jsfiddle.net/685dm7h3/44/)
 
 ## [deploy-acr-aks.ps1](../master/deploy-acr-aks.ps1)
 
@@ -118,7 +120,7 @@ It's best to test a bunch of RDS instance types to be able to compare results:
     )
     ```
 
-1. Install [dbbench](https://github.com/memsql/dbbench):
+2. Install [dbbench](https://github.com/memsql/dbbench):
 
     ```bash
     sudo apt-get -y install golang
@@ -131,7 +133,7 @@ It's best to test a bunch of RDS instance types to be able to compare results:
     go get github.com/memsql/dbbench
     ```
 
-1. cd into the script directory and run ```bash ./aws-rds-test-scale.sh```
+3. cd into the script directory and run ```bash ./aws-rds-test-scale.sh```
 
 ## [sql-server-linux-container-instance.sh](../master/sql-server-linux-container-instance.sh)
 
