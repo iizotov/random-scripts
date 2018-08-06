@@ -1,4 +1,8 @@
-# A Collection of Random Scripts
+# A Collection of Random Stuff
+
+## [Bingings between Azure Storage Services and compute for Analytics](https://jsfiddle.net/685dm7h3/44/)
+
+![Image of Azure Storage to Compute bindinds](../master/images/sankey.png)
 
 ## [deploy-acr-aks.ps1](../master/deploy-acr-aks.ps1)
 
