@@ -6,7 +6,7 @@ alias k='kubectl'
 source <(kubectl completion bash)
 source <(kubectl completion bash | sed 's/kubectl/k/g')
 
-echo "alias k='kubectl'" >> >> ~/.bashrc
+echo "alias k='kubectl'" >> ~/.bashrc
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 echo "source <(kubectl completion bash | sed 's/kubectl/k/g')" >> ~/.bashrc
 
