@@ -1,5 +1,9 @@
 # A Collection of Random Stuff
 
+## [Collecting perf counters for Microsoft Data Migration Assistant](../master/dma-perfprep.ps1)
+
+This script will collecting perf counters on all discovered SQL Server 2016+ databases on the host. The script needs to be run locally. The outputs can be fed to the Microsoft Data Micgration Assistant for right-sizing. Microsoft DMA can be downloaded from [here](https://www.microsoft.com/en-us/download/details.aspx?id=53595)
+
 ## [Some bindings between Azure Storage Services and compute for data analytics](https://jsfiddle.net/iizotov/7fL09cq6/)
 
 ![Image of Azure Storage to Compute bindinds for analytics](../master/images/sankey.png)
